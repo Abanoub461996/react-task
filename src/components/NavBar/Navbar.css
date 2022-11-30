@@ -1,0 +1,52 @@
+nav a.active {
+    color: rgb(169, 241, 86)!important;
+}
+.algym-nav {
+    box-shadow: 2px 0 40px 0 rgb(0 0 0 / 14%);
+    background-color: #fff;
+}
+.navbar-brand.logo {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+.navbar-brand.logo img{
+  width: 100%;
+    height: auto;
+}
+
+.navbar-nav, .navbar{
+  align-items: baseline!important;
+}
+ .nav-link{
+  font-size: 16px !important;
+}
+.nav-link.user-btn {
+  color: #f2203d!important;
+  letter-spacing: 2px;
+  padding: 7px 17px!important;
+  border-radius: 8px!important;
+}
+.sign-up_link.user-btn {
+  color: #fff!important;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(113deg,#f21d3c 28%,#f48b45 138%),linear-gradient(180deg,#020303,#020303);
+  text-transform: uppercase;
+  margin-top: 10px;
+  
+}
+.main-routing_links a{
+  color: #5614cf!important;
+}
+.home-routing_link{
+  font-weight: bold!important;
+}
+.lang-btn{
+  font-family: concon;
+  color: #5614cf!important;
+  direction: rtl;
+  font-size: 18px!important;
+  letter-spacing: 1px;
+}

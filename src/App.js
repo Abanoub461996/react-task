@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// LAYOUTS
+import RootLayout from './layouts/RootLayout';
+import ErrorPage from './layouts/ErrorPage';
+import GymLayout from './layouts/GymLayout';
+//COMPONENTS
+import HotDeals from './pages/HotDeals/HotDeals';
+import Home from "./pages/Home/Home";
+import GymDetails from "./pages/GymDetails/GymDetails";
+
+// USER Components
+import Login from './pages/User/Login';
+import Register from './pages/User/Register';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (<>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<RootLayout/>} >
+            <Route index="true" element ={<Home/>} />
+            <Route path="/hotdeals"  element={<HotDeals/>} />
+            
+            <Route path="/gymdetails"  element={<GymLayout/>} >
+            <Route index="true" element ={<Home/>} />
+            <Route path=":id" element ={<GymDetails/>} />
+          </Route>
+            <Route path="/login" element ={<Login/>} />
+            <Route path="/register" element ={<Register/>} />
+          </Route>
+          <Route path="*" element={<ErrorPage/>} />
+        </Routes>
+        
+    </BrowserRouter>
+    </>);
 }
 
 export default App;
